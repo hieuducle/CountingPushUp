@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import os
-import time
+
 class KalmanFilter:
     def __init__(self):
         self.kf = cv2.KalmanFilter(4, 2)
@@ -32,8 +32,8 @@ if __name__ == '__main__':
   delay = int(1000 / fps)
   fourcc = cv2.VideoWriter.fourcc(*'mp4v')
   os.makedirs("output", exist_ok=True)
-  out = cv2.VideoWriter("output/push_up.mp4", fourcc, fps, (width, 720))
-  start_time = time.time()
+  out = cv2.VideoWriter("output/push_up_.mp4", fourcc, fps, (width, 720))
+
 
   while cap.isOpened():
       flag, frame = cap.read()
@@ -67,12 +67,12 @@ if __name__ == '__main__':
       cv2.putText(frame, "Count {}".format(cnt), (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
       # cv2.imshow("Push-up Counter", frame)
       out.write(frame)
-      if time.time() - start_time > 30 or cv2.waitKey(1) & 0xFF == ord('q'):
-          break
+
 
       # if cv2.waitKey(1) & 0xFF == ord('q'):
       #     break
 
   cap.release()
-  out.release()
+  # out.release()
   cv2.destroyAllWindows()
+  print("Done!")

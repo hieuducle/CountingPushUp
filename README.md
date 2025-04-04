@@ -4,10 +4,10 @@
 </p>
 
 ## Descriptions
-* Use Mediapipe to estimate pose and obtain keypoints
+* Developed a system using MediaPipe to detect body keypoints in a video of push-up exercises, automatically counting the number of push-ups performed based on the detected motion.
 
   
 <p align="center">
   <img src="output/output.gif" width=600><br/>
-  <i>Camera app demo</i>
+  <i>Demo</i>
 </p>

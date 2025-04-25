@@ -8,6 +8,6 @@
 
   
 <p align="center">
-  <img src="output/output.gif" width=600><br/>
+  <img src="output/pushup.gif" width=600><br/>
   <i>Demo</i>
 </p>

@@ -1,3 +1,7 @@
 pose*
 pushup.mp4
 output/*.mp4
+api.py
+*.mp4
+*.html
+__pycache__
